@@ -20,6 +20,12 @@ Final project for the module *"AI-Powered Programming Languages"* of the Master'
   - **Bar chart**: new positive cases per day.
 - Includes a function to generate an AI image (Azure OpenAI / `gpt-image-2`).
 
+  ### Example visualizations
+
+![Line chart – positive cases and hospitalizations](img/grafico_lineas.png)
+
+![Bar chart – new daily cases](img/grafico_barras.png)
+
 ### Analytical decisions
 
 - **Variable choice**: the app plots `positive` (cumulative cases) and `hospitalizedCumulative` (cumulative hospitalizations) because together they tell the story of the contagion's spread: the gap between the two lines reflects the share of cases that required hospitalization.
@@ -51,7 +57,7 @@ The application can work in **two ways**:
 **Option A — with the local data file (recommended for reproducing):** no credentials required. The app detects that no environment variables are set and automatically reads the `CovidResultsCSV.csv` file included in the repository.
 
 ```bash
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 **Option B — with a live API connection:** requires setting the endpoint credentials as environment variables before running.
@@ -61,7 +67,7 @@ Windows (PowerShell):
 ```powershell
 $env:COVID_API_URL = "ENDPOINT_URL"
 $env:COVID_API_KEY = "YOUR_API_KEY"
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 macOS / Linux:
@@ -69,7 +75,7 @@ macOS / Linux:
 ```bash
 export COVID_API_URL="ENDPOINT_URL"
 export COVID_API_KEY="YOUR_API_KEY"
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 > AI image generation additionally uses the `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, and `AZURE_OPENAI_API_VERSION` variables. If they are not defined, the app continues without generating the image.
@@ -77,7 +83,7 @@ python PROYECTO_Python_Estadistica_Pandemia.py
 ### Project structure
 
 ```
-├── PROYECTO_Python_Estadistica_Pandemia.py   # Main application
+├── Python_Pandemic_Statistics.py   # Main application
 ├── CovidResultsCSV.csv                        # Data (local reproducible source)
 ├── requirements.txt                           # Dependencies
 ├── imagen_pizarra.png                         # AI-generated image
@@ -114,6 +120,12 @@ Proyecto final del módulo *"Lenguajes de programación potenciados con IA"* del
   - **Barras**: nuevos casos positivos por día.
 - Incluye una función para generar una imagen con IA (Azure OpenAI / `gpt-image-2`).
 
+### Ejemplos de visualización
+
+![Gráfico de líneas – casos positivos y hospitalizados](img/grafico_lineas.png)
+
+![Gráfico de barras – nuevos casos diarios](img/grafico_barras.png)
+
 ### Decisiones analíticas
 
 - **Elección de variables**: se representan `positive` (casos acumulados) y `hospitalizedCumulative` (hospitalizados acumulados) porque juntos cuentan la historia de la expansión del contagio: la distancia entre ambas líneas refleja la proporción de casos que requirió ingreso hospitalario.
@@ -145,7 +157,7 @@ La aplicación puede funcionar de **dos formas**:
 **Opción A — con el archivo de datos local (recomendada para reproducir):** no requiere credenciales. La aplicación detecta que no hay variables de entorno definidas y lee automáticamente el archivo `CovidResultsCSV.csv` incluido en el repositorio.
 
 ```bash
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 **Opción B — con conexión en vivo a la API:** requiere definir las credenciales del endpoint como variables de entorno antes de ejecutar.
@@ -155,7 +167,7 @@ Windows (PowerShell):
 ```powershell
 $env:COVID_API_URL = "URL_DEL_ENDPOINT"
 $env:COVID_API_KEY = "TU_API_KEY"
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 macOS / Linux:
@@ -163,7 +175,7 @@ macOS / Linux:
 ```bash
 export COVID_API_URL="URL_DEL_ENDPOINT"
 export COVID_API_KEY="TU_API_KEY"
-python PROYECTO_Python_Estadistica_Pandemia.py
+python Python_Pandemic_Statistics.py
 ```
 
 > Para la generación de imagen con IA se usan además las variables `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY` y `AZURE_OPENAI_API_VERSION`. Si no se definen, la aplicación continúa sin generar la imagen.
@@ -171,7 +183,7 @@ python PROYECTO_Python_Estadistica_Pandemia.py
 ### Estructura del proyecto
 
 ```
-├── PROYECTO_Python_Estadistica_Pandemia.py   # Aplicación principal
+├── Python_Pandemic_Statistics.py              # Aplicación principal
 ├── CovidResultsCSV.csv                        # Datos (fuente local reproducible)
 ├── requirements.txt                           # Dependencias
 ├── imagen_pizarra.png                         # Imagen generada con IA
